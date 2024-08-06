@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "target": "ES6",                          // Target ECMAScript 2015 or later
+    "lib": ["DOM", "ESNext"],                 // Include DOM and ESNext libraries
+    "module": "commonjs",                     // Use CommonJS module system
+    "moduleResolution": "node",               // Resolve modules in a Node.js fashion
+    "esModuleInterop": true,                  // Enables interoperability between CommonJS and ES Modules
+    "resolveJsonModule": true,                // Allow importing JSON modules
+    "isolatedModules": true,                  // Ensure each file can be transpiled in isolation
+    "skipLibCheck": true,                     // Skip type checking of declaration files
+    "strict": true,                           // Enable all strict type-checking options
+    "noImplicitAny": true,                    // Raise errors on expressions and declarations with an implied 'any' type
+    "noImplicitThis": true,                   // Raise error on 'this' expressions with an implied 'any' type
+    "strictNullChecks": true,                 // Enable strict null checks
+    "strictFunctionTypes": true,              // Enable strict checking of function types
+    "strictBindCallApply": true,              // Enable strict 'bind', 'call', and 'apply' methods
+    "forceConsistentCasingInFileNames": true, // Ensure consistent casing in file names
+    "types": ["cypress", "mocha"],             // Include Cypress and Node.js types
+    "baseUrl": ".",                           // Base directory to resolve non-relative module names
+    "paths": {
+      "@fixtures/*": ["cypress/fixtures/*"],  // Alias for fixtures
+      "@support/*": ["cypress/support/*"],    // Alias for support files
+      "@integration/*": ["cypress/integration/*"] // Alias for integration tests
+    }
+  },
+  "include": [
+    "cypress/**/*.ts", // Include all TypeScript files in the Cypress folder
+    "cypress.config.ts" // Include Cypress configuration file if using TypeScript for Cypress config
+  ],
+  "exclude": [
+    "node_modules"      // Exclude node_modules folder
+  ]
+}
+                     
